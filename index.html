@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Raya Cookies Sales</title>
+    <style>
+        /* Basic styles for a clean look */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Hari Raya Cookies Sales System</h2>
+
+    <!-- Form to collect customer order details -->
+    <form action="process.php" method="post">
+        
+        <!-- Input field for customer's name -->
+        <label for="name">Customer Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- Dropdown for selecting cookie type -->
+        <label for="cookie">Select Cookie Type:</label>
+        <select id="cookie" name="cookie" required>
+            <option value="Pineapple Tarts">Pineapple Tarts - RM25</option>
+            <option value="Almond London">Almond London - RM30</option>
+            <option value="Kuih Bangkit">Kuih Bangkit - RM20</option>
+            <option value="Semperit">Semperit - RM22</option>
+            <option value="Sugee Cookies">Sugee Cookies - RM28</option>
+        </select><br><br>
+
+        <!-- Input field for selecting quantity -->
+        <label for="quantity">Quantity (containers):</label>
+        <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+
+        <!-- Dropdown for selecting delivery option -->
+        <label for="delivery">Delivery Option:</label>
+        <select id="delivery" name="delivery" required>
+            <option value="Self-Pickup">Self-Pickup - RM0</option>
+            <option value="Standard Delivery">Standard Delivery - RM10</option>
+            <option value="Express Delivery">Express Delivery - RM20</option>
+        </select><br><br>
+
+        <!-- Submit button to process the form -->
+        <button type="submit">Calculate Total</button>
+    </form>
+</body>
+</html>
